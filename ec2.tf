@@ -5,7 +5,7 @@ resource "aws_instance" "modulo" {
   vpc_security_group_ids  = [
     aws_security_group.sg.id
   ]
-
+  subnet_id = var.subnet_id
   tags = {
     Name = "${var.project_name}-${var.environment}-ec2"
   }
